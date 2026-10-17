@@ -1,5 +1,9 @@
-local RunService = game:GetService("RunService")
-local Workspace  = game:GetService("Workspace")
+local cloneref = type(cloneref) == "function" and cloneref or function(obj)
+    return obj
+end
+
+local Workspace = cloneref(game:GetService("Workspace"))
+local RunService = cloneref(game:GetService("RunService"))
 
 local ESP = {}
 ESP.__index = ESP
