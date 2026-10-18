@@ -108,4 +108,4 @@ function Bank.__tostring(self)
     return "Bank"
 end
 
-getgenv().Bank = Bank
+return Bank
