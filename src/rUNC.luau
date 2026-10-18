@@ -11,6 +11,7 @@ end
 load("snapshot.luau")
 load("Bank.luau")
 load("ESPClass.luau")
+getgenv().ESP = ESP
 
 --------------------------------------------------------------------------------------------
 --- instantPrompt()
