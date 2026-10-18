@@ -2,10 +2,10 @@ local cloneref = type(cloneref) == "function" and cloneref or function(obj)
     return obj
 end
 
-local HTTP = cloneref(game:GetService("HTTP"))
+local HTTP = cloneref(game:GetService("HttpService"))
 
 function load(module : string)
-    loadstring("https://raw.githubusercontent.com/R0stok7/rUNC/refs/heads/main/src/"..module)
+    loadstring(game:HttpGet("https://raw.githubusercontent.com/R0stok7/rUNC/refs/heads/main/src/"..module))
 end
 
 load("snapshot.luau")
