@@ -8,7 +8,13 @@ function load(module : string)
     return loadstring(game:HttpGet("https://raw.githubusercontent.com/R0stok7/rUNC/refs/heads/main/src/"..module))
 end
 
-load("snapshot.luau")
+function rsetgenv(table)
+    for i,v in pairs(table) do
+        getgenv()[i] = v
+    end
+end
+
+getgenv().snapshot = rsetgenv(load("snapshot.luau"))
 getgenv().Bank = load("Bank.luau")
 getgenv().ESP = load("ESPClass.luau")
 
