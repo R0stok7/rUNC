@@ -9,9 +9,8 @@ function load(module : string)
 end
 
 load("snapshot.luau")
-load("Bank.luau")
-load("ESPClass.luau")
-getgenv().ESP = ESP
+getgenv().Bank = load("Bank.luau")
+getgenv().ESP = load("ESPClass.luau")
 
 --------------------------------------------------------------------------------------------
 --- instantPrompt()
