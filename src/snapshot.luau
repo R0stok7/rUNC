@@ -6,7 +6,6 @@ function snapshot(instance : Instance)
     return getproperties(instance)
 end
 
-getgenv().snapshot = snapshot
 
 function diff(snapshot_1, snapshot_2)
     if snapshot_1 == nil or snapshot_2 == nil then
@@ -28,7 +27,6 @@ function diff(snapshot_1, snapshot_2)
     end
 end
 
-getgenv().diffsnapshot = diff
 
 function applysnapshot(instance : Instance, snapshot)
     if instance == nil or snapshot == nil then
@@ -42,4 +40,9 @@ function applysnapshot(instance : Instance, snapshot)
     end
 end
 
-getgenv().applysnapshot = applysnapshot
+return {
+snapshot = snapshot,
+diffsnapshot = diff,
+applysnapshot = applysnapshot
+}
+
