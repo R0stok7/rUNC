@@ -5,7 +5,7 @@ end
 local HTTP = cloneref(game:GetService("HttpService"))
 
 function load(module : string)
-    loadstring(game:HttpGet("https://raw.githubusercontent.com/R0stok7/rUNC/refs/heads/main/src/"..module))
+    return loadstring(game:HttpGet("https://raw.githubusercontent.com/R0stok7/rUNC/refs/heads/main/src/"..module))
 end
 
 load("snapshot.luau")
